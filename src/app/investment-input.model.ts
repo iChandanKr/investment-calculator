@@ -12,4 +12,4 @@ export interface CalculatedRestult {
   annualInvestment: number;
   totalInterest: number;
   totalAmountInvested: number;
-}[]
+}

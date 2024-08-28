@@ -3,7 +3,7 @@ import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
 import type { InvestmentInput } from './investment-input.model';
 import { InvestmentResultComponent } from "./investment-result/investment-result.component";
-// import { CalculatedRestult } from './investment-input.model';
+import type{ CalculatedRestult } from './investment-input.model';
 @Component({
   selector: 'app-root',
   standalone: true,
@@ -11,14 +11,7 @@ import { InvestmentResultComponent } from "./investment-result/investment-result
   imports: [HeaderComponent, UserInputComponent, InvestmentResultComponent],
 })
 export class AppComponent {
-  resultData?: {
-    year: number;
-    interest: number;
-    valueEndOfYear: number;
-    annualInvestment: number;
-    totalInterest: number;
-    totalAmountInvested: number;
-  }[];
+  resultData?: CalculatedRestult[];
   onCalculateInvestmentResults(data: InvestmentInput) {
     const { initialInvestment, expectedReturn, annualInvestment, duration } =
       data;
